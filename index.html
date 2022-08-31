@@ -1,0 +1,105 @@
+---
+layout: default
+title: BizzTender LLP
+---
+<header>
+	<div class="container">
+		<div class="column">
+			<div>
+				<h1 class="editable">Welcome to BuzzTender LLP</h1>
+				<p class="editable">The Social Networking Platform for Global Competitions, Tournaments, & Groups.</p>
+				<div class="button">
+					<a href="#donate">Make a Request</a>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<img src="{{ site.baseurl }}/images/Final Logos_Icon_Full Color.png" alt="Sheep">
+		</div>
+	</div>
+</header>
+
+<div class="container">
+	<h2 class="editable" style="text-align: center;">See What the Buzz Is About</h2>
+
+	<ul class="thirds">
+		<li>
+			<div class="image">{% include icons/site.html icon="population" %}</div>
+			<h3 class="editable">Connect</h3>
+			<p class="editable">BuzzTender is a Social Networking Platform created to connect individuals globally to share interests and competition. </p>
+		</li>
+
+		<li>
+			<div class="image">{% include icons/site.html icon="economy" %}</div>
+			<h3 class="editable">Compete</h3>
+			<p class="editable">Healthy competition is the heart of what we do, our bees knees that tends to the competitive landscape we thrive in.</p>
+		</li>
+
+		<li>
+			<div class="image">{% include icons/site.html icon="conditions" %}</div>
+			<h3 class="editable">Repeat</h3>
+			<p class="editable">Creating a dynamic experience, making individuals part of the Buzz.</p>
+		</li>
+	</ul>
+</div>
+
+<div class="container">
+	<div class="columns">
+		<div>
+			<img src="{{ site.baseurl }}/images/App Icon_Leadership Board Gold.png">
+		</div>
+		<div>
+			<h2 class="editable">Our Mission</h2>
+
+			<p class="editable">Competition and Connection are the base of all that we do do.</p>
+		</div>
+	</div>
+</div>
+
+<div class="darker">
+	<div class="container">
+		<h2 class="editable">Meet the Team!</h2>
+		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p>
+		<div class="posts">
+			{% for post in site.posts %}
+				<div class="post">
+					<div class="image" style="background-image: url({{ post.featured_image }})"></div>
+
+					<div class="post-content">
+						<!--<p class="date">{{ post.date | date: '%B %d, %Y' }}</p> -->
+						<h3><a class="linkedin" href="{{ post.link }}">
+							{% include icons/social-media.html social_icon="linkedin" %}
+						</a><br/> {{ post.title }}</h3>
+
+						{{ post.content }}
+						<p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="btn"><strong>&#9998;</strong> Edit Update</a></p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<hr>
+	<blockquote>
+		<p class="quote editable">The ultimate measure of a bee is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
+		<div class="attribute">
+			<p class="meta">
+				<span class="image"><img class="editable" src="{{ site.baseurl }}/images/Final Logos_Icon_Black.png" alt="Wooly"></span>
+				<span class="author editable"><strong>BuzzTender LLP</strong></span>
+			</p>
+		</div>
+	</blockquote>
+</div>
+
+<div class="darker">
+	<div class="container">
+		<h2 class="editable">Join us</h2>
+		<p class="editable" style="text-align: center;">Sign up to hear the latest news and progress. </p>
+		<form action="{{ site.newsletter_action }}" method="post">
+			<input type="text" name="EMAIL" placeholder="Email">
+			<input type="submit" value="Sign up"/>
+		</form>
+	</div>
+</div>
