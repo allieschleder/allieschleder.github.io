@@ -1,12 +1,12 @@
 ---
 layout: default
-title: BizzTender LLP
+title: BuzzTender
 ---
 <header>
 	<div class="container">
 		<div class="column">
 			<div>
-				<h1 class="editable">Welcome to BuzzTender LLP</h1>
+				<h1 class="editable">Welcome to BuzzTender</h1>
 				<p class="editable">The Social Networking Platform for Global Competitions, Tournaments, & Groups.</p>
 				<div class="button">
 					<a href="#donate">Make a Request</a>
@@ -61,7 +61,24 @@ title: BizzTender LLP
 		<h2 class="editable">Meet the Team!</h2>
 		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p>
 		<div class="posts">
-			{% for post in site.posts %}
+			{% for post in site.posts limit: 3 %}
+				<div class="post">
+					<div class="image" style="background-image: url({{ post.featured_image }})"></div>
+
+					<div class="post-content">
+						<!--<p class="date">{{ post.date | date: '%B %d, %Y' }}</p> -->
+						<h3><a class="linkedin" href="{{ post.link }}">
+							{% include icons/social-media.html social_icon="linkedin" %}
+						</a><br/> {{ post.title }}</h3>
+
+						{{ post.content }}
+						<p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="btn"><strong>&#9998;</strong> Edit Update</a></p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="posts">
+			{% for post in site.posts limit: 3 offset: 3 %}
 				<div class="post">
 					<div class="image" style="background-image: url({{ post.featured_image }})"></div>
 
@@ -86,8 +103,8 @@ title: BizzTender LLP
 		<p class="quote editable">The ultimate measure of a bee is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
 		<div class="attribute">
 			<p class="meta">
-				<span class="image"><img class="editable" src="{{ site.baseurl }}/images/Final Logos_Icon_Black.png" alt="Wooly"></span>
-				<span class="author editable"><strong>BuzzTender LLP</strong></span>
+				<!--<span class="image"><img class="editable" src="{{ site.baseurl }}/images/Final Logos_Icon_Black.png" alt="Wooly"></span>--> 
+				<span class="author editable"><strong>BuzzTender</strong></span> 
 			</p>
 		</div>
 	</blockquote>
