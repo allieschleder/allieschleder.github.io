@@ -98,6 +98,49 @@ nav .button {
 		}
 	}
 }
+
+.seconds {
+	@media #{$desktop} {
+		display: flex;
+	}
+	margin: 90px -15px 0 -15px;
+	padding: 0;
+	list-style: none;
+
+	li {
+		box-sizing: border-box;
+		margin: 70px 0px;
+		width: 100%;
+		border: 1px solid #dfdfdf;
+		border-radius: 3px;
+		padding: 0 30px 25px 30px;
+		@media #{$desktop} {
+			width: 50%;
+			margin: 0 15px;
+		}
+
+		text-align: center;
+
+		.image {
+			display: inline-block;
+			line-height: 0;
+			background: white;
+			margin-top: -40px;
+			padding: 10px;
+			box-shadow: 2px 7px 39px 9px #f7f7f7;
+			border-radius: 50px;
+		}
+
+		p {
+			font-size: 1.1rem;
+		}
+
+		svg {
+			fill: $brand-color;
+			padding: 5px;
+		}
+	}
+}
 blockquote {
 	padding: 0;
 	margin: 120px 0 70px 0;
